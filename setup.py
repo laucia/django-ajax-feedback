@@ -4,9 +4,9 @@ setup(
     name='django-feedback',
     version=__import__('feedback').__version__,
     description='Basic Django Feedback',
-    author='Luke Hutscal',
-    author_email='luke@creaturecreative.com',
-    url='http://github.com/girasquid/django-feedback/',
+    author='Lauris Jullien',
+    author_email='lauris@startup-from-scratch.com',
+    url='http://github.com/laucia/django-ajax-feedback/',
     packages=find_packages(),
     classifiers=[
         'Development Status :: 3 - Alpha',
