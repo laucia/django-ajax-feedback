@@ -5,10 +5,10 @@ from feedback.models import AnonymousFeedback, Feedback
 class FeedbackForm(forms.ModelForm):
     class Meta:
         model = Feedback
-        exclude = ('user',)
+        exclude = ('user','context_url')
 
 
 class AnonymousFeedbackForm(forms.ModelForm):
     class Meta:
         model = AnonymousFeedback
-        exclude = ('user',)
+        exclude = ('user','context_url')

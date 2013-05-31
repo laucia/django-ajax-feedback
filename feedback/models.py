@@ -9,10 +9,24 @@ class BaseFeedback(models.Model):
     '''
     Base Class for feedback. Derive this class to create feedback for special type of users.
     '''
-    type = models.CharField(choices=settings.FEEDBACK_CHOICES, max_length=100,
-                            verbose_name=_('Type'))
-    message = models.TextField(verbose_name=_('Message'))
-    time = models.DateTimeField(auto_now_add=True, verbose_name=_('Time'))
+    type = models.CharField(
+        choices=settings.FEEDBACK_CHOICES, 
+        max_length=100,
+        verbose_name=_('Type'),
+        )
+    message = models.TextField(
+        verbose_name=_('Message')
+        )
+    time = models.DateTimeField(
+        auto_now_add=True, 
+        verbose_name=_('Time'),
+        )
+    context_url = models.CharField(
+        null=True,
+        blank=True,
+        max_length=100,
+        verbose_name=_('Context Url'),
+        )
 
     class Meta:
         abstract = True

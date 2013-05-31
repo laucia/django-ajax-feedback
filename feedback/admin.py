@@ -8,7 +8,7 @@ from .models import AnonymousFeedback, Feedback
 
 
 class FeedbackAdmin(admin.ModelAdmin):
-    list_display = ['user', 'message', 'time', 'type', 'view']
+    list_display = ['user', 'message', 'time','context_url' ,'type', 'view']
     search_fields = ['user', 'message']
     list_filter = ['type', 'time']
 
@@ -34,7 +34,7 @@ class FeedbackAdmin(admin.ModelAdmin):
 
 
 class AnonymousFeedbackAdmin(admin.ModelAdmin):
-    list_display = ['user', 'message', 'time', 'type', 'view']
+    list_display = ['user', 'message', 'time','context_url' ,'type', 'view']
     search_fields = ['user', 'message']
     list_filter = ['type', 'time']
 
