@@ -1,3 +1,4 @@
 include AUTHORS
 include LICENSE
 recursive-include feedback/templates/feedback *
+recursive-include feedback/static/feedback *
