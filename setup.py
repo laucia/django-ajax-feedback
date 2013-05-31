@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
  
 setup(
-    name='django-feedback',
+    name='django-ajax-feedback',
     version=__import__('feedback').__version__,
     description='Basic Django Feedback',
     author='Lauris Jullien',

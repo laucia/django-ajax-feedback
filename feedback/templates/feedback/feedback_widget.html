@@ -1,0 +1,11 @@
+{% load i18n%}
+{% if feedback_form %}
+<div id="feedback_widget">
+	<div id="feedback_tab" onmousedown="load_contents('{% url 'feedback'%}');">{% trans "Feedback" %}</div>
+	<div id="overlay"></div>
+	<div id="feedback_panel">
+		<div id="feedback_close" onmousedown="toggle_feedback();">X</div>
+		<div id="feedback_contents"></div>
+	</div>
+</div>
+{%endif%}

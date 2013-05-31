@@ -1,5 +1,5 @@
 ====================
-django-ajax_feedback
+django-ajax-feedback
 ====================
 
 Django Ajax Feedback is a simple Django application that makes it trivial to start accepting user feedback 

@@ -1,0 +1,10 @@
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}feedback/css/feedback.css" />
+<script type="text/javascript" src="{{STATIC_URL}}feedback/js/feedback.js"></script>
+{% if FEEDBACK_INSERT_REQUIREMENT %}
+{%if debug%}
+	<script type="text/javascript" src="{{STATIC_URL}}sfs/js/jquery-2.0.0.js"></script>
+{% else%}
+	<script type="text/javascript" src="{{STATIC_URL}}sfs/js/jquery-2.0.0.min.js"></script>
+{%endif%}
+<script type="text/javascript" src="{{STATIC_URL}}sfs/js/jquery.form.js"></script>
+{% endif %}
