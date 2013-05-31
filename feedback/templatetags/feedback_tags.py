@@ -47,7 +47,7 @@ def feedback_header(context):
     {% feedback_header %}
     '''
     forwarded_context = {'STATIC_URL':context['STATIC_URL']}
-    if getattr(settings, 'FEEDBACK_INSERT_REQUIREMENT', False):
+    if getattr(settings, 'FEEDBACK_INSERT_REQUIREMENT', True):
         forwarded_context.update({'FEEDBACK_INSERT_REQUIREMENT': True})
     else:
         forwarded_context.update({'FEEDBACK_INSERT_REQUIREMENT': False})
