@@ -10,7 +10,7 @@ from .models import AnonymousFeedback, Feedback
 class FeedbackAdmin(admin.ModelAdmin):
     list_display = ['type','user', 'message', 'time','context_url' ,'browser', 'view']
     search_fields = ['user', 'message']
-    list_filter = ['type', 'time'
+    list_filter = ['type', 'time']
 
     def view(self, obj):
         return "<a href='%s'>View</a>" % obj.get_absolute_url()
