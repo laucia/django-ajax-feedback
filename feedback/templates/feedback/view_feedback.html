@@ -12,7 +12,7 @@
         <fieldset class="module aligned">
             <h2>{{ feedback.get_type_display }} from {{ feedback.user|title }} &mdash; {{ feedback.time|timesince }} ago</h2>
 {% if feedback.context_url %}
-            <p><em>viewing : {{feedback.context_url}}</em></p>
+            <p><em>viewing : {{feedback.context_url}} {% if feedback.browser %} with {{feedback.browser}} {% endif %} </em></p>
 {% endif %}
             <p>{{ feedback.message }}</p>
             <h3>Actions</h3>
