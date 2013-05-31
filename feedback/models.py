@@ -30,7 +30,7 @@ class BaseFeedback(models.Model):
     browser = models.CharField(
         null=True,
         blank=True,
-        max_length=50,
+        max_length=250,
         verbose_name=_('Browser'),
         )
 
