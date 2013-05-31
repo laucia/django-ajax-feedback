@@ -27,6 +27,12 @@ class BaseFeedback(models.Model):
         max_length=100,
         verbose_name=_('Context Url'),
         )
+    browser = models.CharField(
+        null=True,
+        blank=True,
+        max_length=50,
+        verbose_name=_('Browser'),
+        )
 
     class Meta:
         abstract = True

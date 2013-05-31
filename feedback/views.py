@@ -41,6 +41,7 @@ def leave_feedback(request, template_name='feedback/feedback_form.html'):
 					feedback.user = request.user
 				try:
 					feedback.context_url = request.META['HTTP_REFERER']
+					feedback.browser = request.META['HTTP_USER_AGENT']
 				except KeyError:
 					pass
 				feedback.save()
