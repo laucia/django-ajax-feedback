@@ -7,8 +7,11 @@ from django.utils.translation import ugettext_lazy as _
 
 class BaseFeedback(models.Model):
     '''
-    Base Class for feedback. Derive this class to create feedback for special type of users.
+    Abstract base class for feedback. 
+    Derive this class to create feedback for special type of users.
+    
     '''
+    
     type = models.CharField(
         choices=settings.FEEDBACK_CHOICES, 
         max_length=100,
@@ -45,7 +48,9 @@ class BaseFeedback(models.Model):
 class Feedback(BaseFeedback):
     '''
     Authenticated User Feedback
+    
     '''
+    
     user = models.ForeignKey(User, verbose_name=_('User'))
 
     def get_absolute_url(self):
@@ -55,7 +60,9 @@ class Feedback(BaseFeedback):
 class AnonymousFeedback(BaseFeedback):
     '''
     Anonymous User Feedback
+    
     '''
+    
     user = models.ForeignKey(User, verbose_name=_('User'), null=True,
                              blank=True, default=None)
 
