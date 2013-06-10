@@ -51,7 +51,10 @@ class ModelTest(TestCase):
 class ViewTest(TestCase):
 
 	def setUp(self):
-		User.objects.create_user(**user_info)
+		self.user = User.objects.create_user(**user_info)
+
+	def tearDown(self):
+		self.user.delete()
 
 	def test_non_ajax_request(self):
 		'''
