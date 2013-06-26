@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013 Lauris JULLIEN
+# This file is distributed under the same license as the Django package.
+# Lauris JULLIEN <lauris.jullien@gmail.com>, 2013.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-06-26 15:04+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: feedback/models.py:18
+msgid "Type"
+msgstr "Type"
+
+#: feedback/models.py:21
+msgid "Message"
+msgstr "Message"
+
+#: feedback/models.py:25
+msgid "Time"
+msgstr "Date/Heure"
+
+#: feedback/models.py:31
+msgid "Context Url"
+msgstr "URL visitée"
+
+#: feedback/models.py:37
+msgid "Browser"
+msgstr "Navigateur"
+
+#: feedback/models.py:54 feedback/models.py:66
+msgid "User"
+msgstr "Utilisateur"
+
+#: feedback/views.py:48
+msgid "Your feedback has been sent to us! Thanks a lot."
+msgstr "Nous avons bien reçu votre feedback. Merci beaucoup !"
+
+#: feedback/templates/feedback/feedback_form.html:10
+msgid "Leave feedback"
+msgstr "Envoyer un feedback"
+
+#: feedback/templates/feedback/feedback_widget.html:4
+#: feedback/templates/feedback/index.html:13
+#: feedback/templates/feedback/view_feedback.html:6
+msgid "Feedback"
+msgstr "Feedback"
+
+#: feedback/templates/feedback/view_feedback.html:5
+msgid "Home"
+msgstr "Accueil"
