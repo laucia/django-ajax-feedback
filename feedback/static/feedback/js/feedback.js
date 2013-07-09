@@ -27,7 +27,7 @@ function load_contents(url){
 				success: process_json,
 				beforeSubmit: before_form
 			};
-			var $form = $contents.children('form')
+			var $form = $contents.find('form')
 			$form.ajaxForm(options)
 			toggle_feedback();
 		}
