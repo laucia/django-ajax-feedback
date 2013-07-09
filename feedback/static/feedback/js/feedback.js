@@ -39,7 +39,7 @@ function load_contents(url){
  */
 function before_form(arr, $form, options) { 
 	var $parent = $form.parent();
-	$parent.children('.messages').empty(); //Get rid of any old errors
+	$parent.find('.messages').empty(); //Get rid of any old errors
 	return true;
 }
 
@@ -52,17 +52,17 @@ function process_json(data, statusText, xhr, $form) {
 	if (data) {
 		var success = data.success;
  		if(success) {
-			$parent.children('.messages').append('<li class="success">' + success + '</li>');
+			$parent.find('.messages').append('<li class="success">' + success + '</li>');
 			$form.remove()
 			window.setTimeout(toggle_feedback,1500)
 		} else {
 			var errors = eval(data.errors)
 			$.each(errors,function(fieldname,errmsg)
 			{
-				$parent.children('.messages').append('<li class="error">' + fieldname + ': ' + errmsg + '</li>');
+				$parent.find('.messages').append('<li class="error">' + fieldname + ': ' + errmsg + '</li>');
 			});
 		}
 	} else {
-		$parent.children('.messages').append('<li class="error">Ajax error: no data received.</li>');
+		$parent.find('.messages').append('<li class="error">Ajax error: no data received.</li>');
 	}
 }
